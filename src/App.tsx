@@ -1,18 +1,16 @@
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Posts from "./pages/Posts";
+import Post from "./pages/Post";
+import Header from "./components/Header";
 
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Home from './pages/Home';
-import About from './pages/About';
-import Posts from './pages/Posts';
-import Post from './pages/Post';
-import Header from './components/Header';
-
-import './App.css'
+import "./App.css";
 
 function App() {
-
   return (
     <>
-      <Router>
+      <Router basename="/">
         <div>
           <Header />
           <Routes>
@@ -24,7 +22,7 @@ function App() {
         </div>
       </Router>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
